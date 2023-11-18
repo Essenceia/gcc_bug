@@ -4,10 +4,16 @@
 // Supported LTO compression algorithms: zlib zstd
 // gcc version 13.2.1 20230801 (GCC) 
 // 
+// GNU C++17 (GCC) version 13.2.1 20230801 (x86_64-pc-linux-gnu)
+// 	compiled by GNU C version 13.2.1 20230801, GMP version 6.3.0, MPFR version 4.2.0-p12, MPC version 1.3.1, isl version isl-0.26-GMP
+// 
+// warning: MPFR header version 4.2.0-p12 differs from library version 4.2.1.
+// GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+// Compiler executable checksum: 5a490a353c29b926850bca65a518c219
 // main.cpp: In function ‘int main()’:
-// main.cpp:18:40: internal compiler error: in finish_expr_stmt, at cp/semantics.cc:892
+// main.cpp:18:68: internal compiler error: in finish_expr_stmt, at cp/semantics.cc:892
 //    18 |         foo f((uint8_t*)DEFAULT_DST_MAC);
-//       |                                        ^
+//       |                                                                    ^
 // 0x1ad33c8 internal_error(char const*, ...)
 // 	???:0
 // 0x6b7b63 fancy_abort(char const*, int, char const*)
@@ -20,8 +26,14 @@
 // Please include the complete backtrace with any bug report.
 // See <https://bugs.archlinux.org/> for instructions.
 
-// /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1plus -quiet -D_GNU_SOURCE main.cpp -quiet -dumpbase main.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -freport-bug -o - -frandom-seed=0 -fdump-noaddr
+// /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/cc1plus -fpreprocessed main.ii -quiet -dumpbase main.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -freport-bug -o - -frandom-seed=0 -fdump-noaddr
 
+# 0 "main.ii"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 0 "<command-line>" 2
+# 1 "main.ii"
 # 0 "main.cpp"
 # 0 "<built-in>"
 # 0 "<command-line>"
@@ -71,8 +83,7 @@
 # 1 "/usr/include/bits/wordsize.h" 1 3 4
 # 20 "/usr/include/bits/timesize.h" 2 3 4
 # 29 "/usr/include/bits/types.h" 2 3 4
-
-
+# 31 "/usr/include/bits/types.h" 3 4
 
 # 31 "/usr/include/bits/types.h" 3 4
 typedef unsigned char __u_char;
@@ -264,7 +275,6 @@ typedef __uintmax_t uintmax_t;
 # 2 "main.cpp" 2
 # 1 "/usr/include/c++/13.2.1/iostream" 1 3
 # 36 "/usr/include/c++/13.2.1/iostream" 3
-       
 # 37 "/usr/include/c++/13.2.1/iostream" 3
 
 # 1 "/usr/include/c++/13.2.1/bits/requires_hosted.h" 1 3
@@ -339,21 +349,18 @@ namespace std
 
 # 1 "/usr/include/c++/13.2.1/ostream" 1 3
 # 36 "/usr/include/c++/13.2.1/ostream" 3
-       
 # 37 "/usr/include/c++/13.2.1/ostream" 3
 
 
 
 # 1 "/usr/include/c++/13.2.1/ios" 1 3
 # 36 "/usr/include/c++/13.2.1/ios" 3
-       
 # 37 "/usr/include/c++/13.2.1/ios" 3
 
 
 
 # 1 "/usr/include/c++/13.2.1/iosfwd" 1 3
 # 36 "/usr/include/c++/13.2.1/iosfwd" 3
-       
 # 37 "/usr/include/c++/13.2.1/iosfwd" 3
 
 
@@ -361,20 +368,17 @@ namespace std
 
 # 1 "/usr/include/c++/13.2.1/bits/stringfwd.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/stringfwd.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/stringfwd.h" 3
 
 
 # 1 "/usr/include/c++/13.2.1/bits/memoryfwd.h" 1 3
 # 46 "/usr/include/c++/13.2.1/bits/memoryfwd.h" 3
-       
 # 47 "/usr/include/c++/13.2.1/bits/memoryfwd.h" 3
 
 
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 64 "/usr/include/c++/13.2.1/bits/memoryfwd.h" 3
   template<typename>
     class allocator;
@@ -400,14 +404,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
-
-
-
-
-
-
-
+# 52 "/usr/include/c++/13.2.1/bits/stringfwd.h" 3
   template<class _CharT>
     struct char_traits;
 
@@ -451,12 +448,10 @@ namespace __cxx11 {
 # 42 "/usr/include/c++/13.2.1/iosfwd" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/postypes.h" 1 3
 # 38 "/usr/include/c++/13.2.1/bits/postypes.h" 3
-       
 # 39 "/usr/include/c++/13.2.1/bits/postypes.h" 3
 
 # 1 "/usr/include/c++/13.2.1/cwchar" 1 3
 # 39 "/usr/include/c++/13.2.1/cwchar" 3
-       
 # 40 "/usr/include/c++/13.2.1/cwchar" 3
 
 
@@ -1382,7 +1377,6 @@ namespace std
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 62 "/usr/include/c++/13.2.1/bits/postypes.h" 3
   typedef long int streamoff;
 
@@ -1523,7 +1517,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 76 "/usr/include/c++/13.2.1/iosfwd" 3
   class ios_base;
 
@@ -1666,13 +1659,11 @@ namespace __cxx11 {
 # 41 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/exception" 1 3
 # 33 "/usr/include/c++/13.2.1/exception" 3
-       
 # 34 "/usr/include/c++/13.2.1/exception" 3
 
 
 # 1 "/usr/include/c++/13.2.1/bits/exception.h" 1 3
 # 34 "/usr/include/c++/13.2.1/bits/exception.h" 3
-       
 # 35 "/usr/include/c++/13.2.1/bits/exception.h" 3
 
 
@@ -1787,7 +1778,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
-
 # 156 "/usr/include/c++/13.2.1/exception" 3
   void __verbose_terminate_handler();
 
@@ -1803,7 +1793,6 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 # 36 "/usr/include/c++/13.2.1/bits/exception_ptr.h" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/cxxabi_init_exception.h" 1 3
 # 34 "/usr/include/c++/13.2.1/bits/cxxabi_init_exception.h" 3
-       
 # 35 "/usr/include/c++/13.2.1/bits/cxxabi_init_exception.h" 3
 
 #pragma GCC visibility push(default)
@@ -1859,14 +1848,12 @@ namespace __cxxabiv1
 # 37 "/usr/include/c++/13.2.1/bits/exception_ptr.h" 2 3
 # 1 "/usr/include/c++/13.2.1/typeinfo" 1 3
 # 32 "/usr/include/c++/13.2.1/typeinfo" 3
-       
 # 33 "/usr/include/c++/13.2.1/typeinfo" 3
 
 
 
 # 1 "/usr/include/c++/13.2.1/bits/hash_bytes.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/hash_bytes.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/hash_bytes.h" 3
 
 
@@ -1934,7 +1921,7 @@ namespace std
 
     bool before(const type_info& __arg) const noexcept;
 
-   
+
     bool operator==(const type_info& __arg) const noexcept;
 
 
@@ -2059,7 +2046,6 @@ namespace std
 # 38 "/usr/include/c++/13.2.1/bits/exception_ptr.h" 2 3
 # 1 "/usr/include/c++/13.2.1/new" 1 3
 # 38 "/usr/include/c++/13.2.1/new" 3
-       
 # 39 "/usr/include/c++/13.2.1/new" 3
 
 
@@ -2236,7 +2222,6 @@ namespace std
 # 37 "/usr/include/c++/13.2.1/bits/move.h" 3
 # 1 "/usr/include/c++/13.2.1/type_traits" 1 3
 # 32 "/usr/include/c++/13.2.1/type_traits" 3
-       
 # 33 "/usr/include/c++/13.2.1/type_traits" 3
 
 
@@ -2924,7 +2909,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _Tp>
     struct
-   
+
     is_pod
     : public integral_constant<bool, __is_pod(_Tp)>
     {
@@ -3988,7 +3973,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<std::size_t _Len, std::size_t _Align =
     __alignof__(typename __aligned_storage_msa<_Len>::__type)>
     struct
-   
+
     aligned_storage
     {
       union type
@@ -4021,7 +4006,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 2141 "/usr/include/c++/13.2.1/type_traits" 3
   template <size_t _Len, typename... _Types>
     struct
-   
+
     aligned_union
     {
     private:
@@ -4541,7 +4526,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _Tp>
-   
+
     inline
     _Require<__not_<__is_tuple_like<_Tp>>,
       is_move_constructible<_Tp>,
@@ -4551,7 +4536,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
              is_nothrow_move_assignable<_Tp>>::value);
 
   template<typename _Tp, size_t _Nm>
-   
+
     inline
     __enable_if_t<__is_swappable<_Tp>::value>
     swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
@@ -5026,7 +5011,7 @@ template <typename _Tp>
 template <typename _Tp>
   inline constexpr bool is_standard_layout_v = __is_standard_layout(_Tp);
 template <typename _Tp>
- 
+
   inline constexpr bool is_pod_v = __is_pod(_Tp);
 template <typename _Tp>
   [[__deprecated__]]
@@ -5288,7 +5273,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template <typename _Tp, typename _Up = _Tp>
-   
+
     inline _Tp
     __exchange(_Tp& __obj, _Up&& __new_val)
     {
@@ -5298,7 +5283,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 179 "/usr/include/c++/13.2.1/bits/move.h" 3
   template<typename _Tp>
-   
+
     inline
 
     typename enable_if<__and_<__not_<__is_tuple_like<_Tp>>,
@@ -5324,7 +5309,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _Tp, size_t _Nm>
-   
+
     inline
 
     typename enable_if<__is_swappable<_Tp>::value>::type
@@ -5445,13 +5430,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
  __attribute__ ((__pure__));
     };
 
-   
+
     inline
     exception_ptr::exception_ptr() noexcept
     : _M_exception_object(0)
     { }
 
-   
+
     inline
     exception_ptr::exception_ptr(const exception_ptr& __other)
     noexcept
@@ -5461,7 +5446,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_addref();
     }
 
-   
+
     inline
     exception_ptr::~exception_ptr() noexcept
     {
@@ -5469,7 +5454,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  _M_release();
     }
 
-   
+
     inline exception_ptr&
     exception_ptr::operator=(const exception_ptr& __other) noexcept
     {
@@ -5477,7 +5462,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return *this;
     }
 
-   
+
     inline void
     exception_ptr::swap(exception_ptr &__other) noexcept
     {
@@ -5493,7 +5478,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
     template<typename _Ex>
-     
+
       inline void
       __dest_thunk(void* __x)
       { static_cast<_Ex*>(__x)->~_Ex(); }
@@ -5638,20 +5623,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 42 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/char_traits.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
 # 46 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
 # 1 "/usr/include/c++/13.2.1/cwchar" 1 3
 # 39 "/usr/include/c++/13.2.1/cwchar" 3
-       
 # 40 "/usr/include/c++/13.2.1/cwchar" 3
 # 47 "/usr/include/c++/13.2.1/bits/char_traits.h" 2 3
 # 64 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
-
-
- 
 # 68 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wstringop-overflow"
@@ -5779,7 +5759,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT>
-   
+
     typename char_traits<_CharT>::char_type*
     char_traits<_CharT>::
     move(char_type* __s1, const char_type* __s2, std::size_t __n)
@@ -5792,7 +5772,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT>
-   
+
     typename char_traits<_CharT>::char_type*
     char_traits<_CharT>::
     copy(char_type* __s1, const char_type* __s2, std::size_t __n)
@@ -5805,7 +5785,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT>
-   
+
     typename char_traits<_CharT>::char_type*
     char_traits<_CharT>::
     assign(char_type* __s, std::size_t __n, char_type __a)
@@ -5833,7 +5813,6 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 340 "/usr/include/c++/13.2.1/bits/char_traits.h" 3
   template<typename _CharT>
     struct char_traits : public __gnu_cxx::char_traits<_CharT>
@@ -6379,18 +6358,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 43 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/localefwd.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/localefwd.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/localefwd.h" 3
 
 
 # 1 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h" 1 3
 # 39 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h" 3
-       
 # 40 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h" 3
 
 # 1 "/usr/include/c++/13.2.1/clocale" 1 3
 # 39 "/usr/include/c++/13.2.1/clocale" 3
-       
 # 40 "/usr/include/c++/13.2.1/clocale" 3
 
 
@@ -6569,7 +6545,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/cctype" 1 3
 # 39 "/usr/include/c++/13.2.1/cctype" 3
-       
 # 40 "/usr/include/c++/13.2.1/cctype" 3
 
 
@@ -6713,7 +6688,6 @@ namespace std
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 55 "/usr/include/c++/13.2.1/bits/localefwd.h" 3
   class locale;
 
@@ -6876,12 +6850,10 @@ namespace __cxx11 {
 # 44 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/ios_base.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/ios_base.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/ios_base.h" 3
 
 # 1 "/usr/include/c++/13.2.1/ext/atomicity.h" 1 3
 # 32 "/usr/include/c++/13.2.1/ext/atomicity.h" 3
-       
 # 33 "/usr/include/c++/13.2.1/ext/atomicity.h" 3
 
 
@@ -8434,41 +8406,6 @@ typedef pthread_mutex_t __gthread_recursive_mutex_t;
 typedef pthread_cond_t __gthread_cond_t;
 typedef struct timespec __gthread_time_t;
 # 102 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h" 3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 299 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h" 3
 static inline int
 __gthread_active_p (void)
@@ -8766,13 +8703,11 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/locale_classes.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/locale_classes.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/locale_classes.h" 3
 
 
 # 1 "/usr/include/c++/13.2.1/string" 1 3
 # 36 "/usr/include/c++/13.2.1/string" 3
-       
 # 37 "/usr/include/c++/13.2.1/string" 3
 
 
@@ -8872,7 +8807,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 62 "/usr/include/c++/13.2.1/bits/new_allocator.h" 3
   template<typename _Tp>
     class __new_allocator
@@ -8899,11 +8833,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       __attribute__((__always_inline__))
-     
+
       __new_allocator() noexcept { }
 
       __attribute__((__always_inline__))
-     
+
       __new_allocator(const __new_allocator&) noexcept { }
 
       template<typename _Tp1>
@@ -9045,7 +8979,6 @@ namespace std
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 74 "/usr/include/c++/13.2.1/bits/allocator.h" 3
   template<>
     class allocator<void>
@@ -9109,11 +9042,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
       __attribute__((__always_inline__))
-     
+
       allocator() noexcept { }
 
       __attribute__((__always_inline__))
-     
+
       allocator(const allocator& __a) noexcept
       : __allocator_base<_Tp>(__a) { }
 
@@ -9215,7 +9148,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 44 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/cpp_type_traits.h" 1 3
 # 35 "/usr/include/c++/13.2.1/bits/cpp_type_traits.h" 3
-       
 # 36 "/usr/include/c++/13.2.1/bits/cpp_type_traits.h" 3
 # 67 "/usr/include/c++/13.2.1/bits/cpp_type_traits.h" 3
 extern "C++" {
@@ -9646,7 +9578,7 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
 
 
   template<typename _Iterator>
-   
+
     inline _Iterator
     __miter_base(_Iterator __it)
     { return __it; }
@@ -9658,13 +9590,11 @@ __extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; t
 
 # 1 "/usr/include/c++/13.2.1/bits/ostream_insert.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/ostream_insert.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/ostream_insert.h" 3
 
 
 # 1 "/usr/include/c++/13.2.1/bits/cxxabi_forced.h" 1 3
 # 34 "/usr/include/c++/13.2.1/bits/cxxabi_forced.h" 3
-       
 # 35 "/usr/include/c++/13.2.1/bits/cxxabi_forced.h" 3
 
 #pragma GCC visibility push(default)
@@ -9790,24 +9720,20 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 47 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 1 3
 # 62 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 3
-       
 # 63 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 3
 
 # 1 "/usr/include/c++/13.2.1/bits/concept_check.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/concept_check.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/concept_check.h" 3
 # 65 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 2 3
 # 1 "/usr/include/c++/13.2.1/debug/assertions.h" 1 3
 # 66 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 1 3
 # 62 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 3
-       
 # 63 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 3
 # 74 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 93 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 3
   struct input_iterator_tag { };
 
@@ -9925,14 +9851,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       typedef is_base_of<random_access_iterator_tag, _Cat> _Base;
       enum { __value = _Base::value };
     };
-
-
-
-
-
-
-
-
+# 270 "/usr/include/c++/13.2.1/bits/stl_iterator_base_types.h" 3
 }
 # 67 "/usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h" 2 3
 
@@ -9953,7 +9872,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
                input_iterator_tag)
     {
 
-     
+
 
       typename iterator_traits<_InputIterator>::difference_type __n = 0;
       while (__first != __last)
@@ -9972,7 +9891,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
                random_access_iterator_tag)
     {
 
-     
+
 
       return __last - __first;
     }
@@ -10014,7 +9933,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     __advance(_InputIterator& __i, _Distance __n, input_iterator_tag)
     {
 
-     
+
       do { if (std::__is_constant_evaluated() && !bool(__n >= 0)) __builtin_unreachable(); } while (false);
       while (__n--)
  ++__i;
@@ -10026,7 +9945,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        bidirectional_iterator_tag)
     {
 
-     
+
 
       if (__n > 0)
         while (__n--)
@@ -10042,7 +9961,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
               random_access_iterator_tag)
     {
 
-     
+
 
       if (__builtin_constant_p(__n) && __n == 1)
  ++__i;
@@ -10077,7 +9996,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   iterator_traits<_InputIterator>::difference_type __n = 1)
     {
 
-     
+
       std::advance(__x, __n);
       return __x;
     }
@@ -10089,7 +10008,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   iterator_traits<_BidirectionalIterator>::difference_type __n = 1)
     {
 
-     
+
 
       std::advance(__x, -__n);
       return __x;
@@ -10104,7 +10023,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 65 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
 # 1 "/usr/include/c++/13.2.1/ext/type_traits.h" 1 3
 # 32 "/usr/include/c++/13.2.1/ext/type_traits.h" 3
-       
 # 33 "/usr/include/c++/13.2.1/ext/type_traits.h" 3
 
 
@@ -10468,9 +10386,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 88 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 113 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
- 
 # 113 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
@@ -10833,7 +10749,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     { return reverse_iterator<_Iterator>(__i); }
 # 666 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
   template<typename _Iterator>
-   
+
     auto
     __niter_base(reverse_iterator<_Iterator> __it)
     -> decltype(__make_reverse_iterator(__niter_base(__it.base())))
@@ -10845,7 +10761,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     { };
 
   template<typename _Iterator>
-   
+
     auto
     __miter_base(reverse_iterator<_Iterator> __it)
     -> decltype(__make_reverse_iterator(__miter_base(__it.base())))
@@ -10870,7 +10786,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       back_insert_iterator(_Container& __x)
       : container(std::__addressof(__x)) { }
 # 735 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
-     
+
       back_insert_iterator&
       operator=(const typename _Container::value_type& __value)
       {
@@ -10878,7 +10794,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       back_insert_iterator&
       operator=(typename _Container::value_type&& __value)
       {
@@ -10894,13 +10810,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
       { return *this; }
 
 
-     
+
       back_insert_iterator&
       operator++()
       { return *this; }
 
 
-     
+
       back_insert_iterator
       operator++(int)
       { return *this; }
@@ -10931,7 +10847,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       front_insert_iterator(_Container& __x)
       : container(std::__addressof(__x)) { }
 # 836 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
-     
+
       front_insert_iterator&
       operator=(const typename _Container::value_type& __value)
       {
@@ -10939,7 +10855,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       front_insert_iterator&
       operator=(typename _Container::value_type&& __value)
       {
@@ -10955,13 +10871,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
       { return *this; }
 
 
-     
+
       front_insert_iterator&
       operator++()
       { return *this; }
 
 
-     
+
       front_insert_iterator
       operator++(int)
       { return *this; }
@@ -10990,11 +10906,11 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
       typedef _Container container_type;
 # 928 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
-     
+
       insert_iterator(_Container& __x, _Iter __i)
       : container(std::__addressof(__x)), iter(__i) {}
 # 964 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
-     
+
       insert_iterator&
       operator=(const typename _Container::value_type& __value)
       {
@@ -11003,7 +10919,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       insert_iterator&
       operator=(typename _Container::value_type&& __value)
       {
@@ -11020,13 +10936,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
       { return *this; }
 
 
-     
+
       insert_iterator&
       operator++()
       { return *this; }
 
 
-     
+
       insert_iterator&
       operator++(int)
       { return *this; }
@@ -11048,7 +10964,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
-
 # 1046 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
   template<typename _Iterator, typename _Container>
     class __normal_iterator
@@ -11093,17 +11008,17 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
         : _M_current(__i.base()) { }
 
 
-     
+
       reference
       operator*() const noexcept
       { return *_M_current; }
 
-     
+
       pointer
       operator->() const noexcept
       { return _M_current; }
 
-     
+
       __normal_iterator&
       operator++() noexcept
       {
@@ -11111,13 +11026,13 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       __normal_iterator
       operator++(int) noexcept
       { return __normal_iterator(_M_current++); }
 
 
-     
+
       __normal_iterator&
       operator--() noexcept
       {
@@ -11125,38 +11040,38 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       __normal_iterator
       operator--(int) noexcept
       { return __normal_iterator(_M_current--); }
 
 
-     
+
       reference
       operator[](difference_type __n) const noexcept
       { return _M_current[__n]; }
 
-     
+
       __normal_iterator&
       operator+=(difference_type __n) noexcept
       { _M_current += __n; return *this; }
 
-     
+
       __normal_iterator
       operator+(difference_type __n) const noexcept
       { return __normal_iterator(_M_current + __n); }
 
-     
+
       __normal_iterator&
       operator-=(difference_type __n) noexcept
       { _M_current -= __n; return *this; }
 
-     
+
       __normal_iterator
       operator-(difference_type __n) const noexcept
       { return __normal_iterator(_M_current - __n); }
 
-     
+
       const _Iterator&
       base() const noexcept
       { return _M_current; }
@@ -11303,7 +11218,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _Iterator, typename _Container>
-   
+
     _Iterator
     __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
     noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
@@ -11620,7 +11535,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     { return _ReturnType(__i); }
 # 2952 "/usr/include/c++/13.2.1/bits/stl_iterator.h" 3
   template<typename _Iterator>
-   
+
     auto
     __niter_base(move_iterator<_Iterator> __it)
     -> decltype(make_move_iterator(__niter_base(__it.base())))
@@ -11634,7 +11549,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
   template<typename _Iterator>
-   
+
     auto
     __miter_base(move_iterator<_Iterator> __it)
     -> decltype(__miter_base(__it.base()))
@@ -11663,7 +11578,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 63 "/usr/include/c++/13.2.1/bits/stl_function.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 116 "/usr/include/c++/13.2.1/bits/stl_function.h" 3
   template<typename _Arg, typename _Result>
     struct unary_function
@@ -12877,7 +12791,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 107 "/usr/include/c++/13.2.1/backward/binders.h" 3
   template<typename _Operation>
     class binder1st
@@ -12959,7 +12872,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 50 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/ext/numeric_traits.h" 1 3
 # 32 "/usr/include/c++/13.2.1/ext/numeric_traits.h" 3
-       
 # 33 "/usr/include/c++/13.2.1/ext/numeric_traits.h" 3
 
 
@@ -12967,7 +12879,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
-
 # 50 "/usr/include/c++/13.2.1/ext/numeric_traits.h" 3
   template<typename _Tp>
     struct __is_integer_nonstrict
@@ -13073,7 +12984,6 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 # 62 "/usr/include/c++/13.2.1/bits/stl_pair.h" 3
 # 1 "/usr/include/c++/13.2.1/bits/utility.h" 1 3
 # 36 "/usr/include/c++/13.2.1/bits/utility.h" 3
-       
 # 37 "/usr/include/c++/13.2.1/bits/utility.h" 3
 
 
@@ -13305,7 +13215,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 80 "/usr/include/c++/13.2.1/bits/stl_pair.h" 3
   struct piecewise_construct_t { explicit piecewise_construct_t() = default; };
 
@@ -13955,23 +13864,23 @@ namespace __ops
 
 
 
-   
+
     explicit
     _Iter_less_val(_Iter_less_iter) { }
 
     template<typename _Iterator, typename _Value>
-     
+
       bool
       operator()(_Iterator __it, _Value& __val) const
       { return *__it < __val; }
   };
 
- 
+
   inline _Iter_less_val
   __iter_less_val()
   { return _Iter_less_val(); }
 
- 
+
   inline _Iter_less_val
   __iter_comp_val(_Iter_less_iter)
   { return _Iter_less_val(); }
@@ -13984,23 +13893,23 @@ namespace __ops
 
 
 
-   
+
     explicit
     _Val_less_iter(_Iter_less_iter) { }
 
     template<typename _Value, typename _Iterator>
-     
+
       bool
       operator()(_Value& __val, _Iterator __it) const
       { return __val < *__it; }
   };
 
- 
+
   inline _Val_less_iter
   __val_less_iter()
   { return _Val_less_iter(); }
 
- 
+
   inline _Val_less_iter
   __val_comp_iter(_Iter_less_iter)
   { return _Val_less_iter(); }
@@ -14008,13 +13917,13 @@ namespace __ops
   struct _Iter_equal_to_iter
   {
     template<typename _Iterator1, typename _Iterator2>
-     
+
       bool
       operator()(_Iterator1 __it1, _Iterator2 __it2) const
       { return *__it1 == *__it2; }
   };
 
- 
+
   inline _Iter_equal_to_iter
   __iter_equal_to_iter()
   { return _Iter_equal_to_iter(); }
@@ -14022,18 +13931,18 @@ namespace __ops
   struct _Iter_equal_to_val
   {
     template<typename _Iterator, typename _Value>
-     
+
       bool
       operator()(_Iterator __it, _Value& __val) const
       { return *__it == __val; }
   };
 
- 
+
   inline _Iter_equal_to_val
   __iter_equal_to_val()
   { return _Iter_equal_to_val(); }
 
- 
+
   inline _Iter_equal_to_val
   __iter_comp_val(_Iter_equal_to_iter)
   { return _Iter_equal_to_val(); }
@@ -14066,20 +13975,20 @@ namespace __ops
     {
       _Compare _M_comp;
 
-     
+
       explicit
       _Iter_comp_val(_Compare __comp)
  : _M_comp(std::move(__comp))
       { }
 
-     
+
       explicit
       _Iter_comp_val(const _Iter_comp_iter<_Compare>& __comp)
  : _M_comp(__comp._M_comp)
       { }
 
 
-     
+
       explicit
       _Iter_comp_val(_Iter_comp_iter<_Compare>&& __comp)
  : _M_comp(std::move(__comp._M_comp))
@@ -14094,13 +14003,13 @@ namespace __ops
     };
 
   template<typename _Compare>
-   
+
     inline _Iter_comp_val<_Compare>
     __iter_comp_val(_Compare __comp)
     { return _Iter_comp_val<_Compare>(std::move(__comp)); }
 
   template<typename _Compare>
-   
+
     inline _Iter_comp_val<_Compare>
     __iter_comp_val(_Iter_comp_iter<_Compare> __comp)
     { return _Iter_comp_val<_Compare>(std::move(__comp)); }
@@ -14110,20 +14019,20 @@ namespace __ops
     {
       _Compare _M_comp;
 
-     
+
       explicit
       _Val_comp_iter(_Compare __comp)
  : _M_comp(std::move(__comp))
       { }
 
-     
+
       explicit
       _Val_comp_iter(const _Iter_comp_iter<_Compare>& __comp)
  : _M_comp(__comp._M_comp)
       { }
 
 
-     
+
       explicit
       _Val_comp_iter(_Iter_comp_iter<_Compare>&& __comp)
  : _M_comp(std::move(__comp._M_comp))
@@ -14138,13 +14047,13 @@ namespace __ops
     };
 
   template<typename _Compare>
-   
+
     inline _Val_comp_iter<_Compare>
     __val_comp_iter(_Compare __comp)
     { return _Val_comp_iter<_Compare>(std::move(__comp)); }
 
   template<typename _Compare>
-   
+
     inline _Val_comp_iter<_Compare>
     __val_comp_iter(_Iter_comp_iter<_Compare> __comp)
     { return _Val_comp_iter<_Compare>(std::move(__comp)); }
@@ -14154,7 +14063,7 @@ namespace __ops
     {
       _Value& _M_value;
 
-     
+
       explicit
       _Iter_equals_val(_Value& __value)
  : _M_value(__value)
@@ -14168,7 +14077,7 @@ namespace __ops
     };
 
   template<typename _Value>
-   
+
     inline _Iter_equals_val<_Value>
     __iter_equals_val(_Value& __val)
     { return _Iter_equals_val<_Value>(__val); }
@@ -14178,7 +14087,7 @@ namespace __ops
     {
       _Iterator1 _M_it1;
 
-     
+
       explicit
       _Iter_equals_iter(_Iterator1 __it1)
  : _M_it1(__it1)
@@ -14192,7 +14101,7 @@ namespace __ops
     };
 
   template<typename _Iterator>
-   
+
     inline _Iter_equals_iter<_Iterator>
     __iter_comp_iter(_Iter_equal_to_iter, _Iterator __it)
     { return _Iter_equals_iter<_Iterator>(__it); }
@@ -14202,7 +14111,7 @@ namespace __ops
     {
       _Predicate _M_pred;
 
-     
+
       explicit
       _Iter_pred(_Predicate __pred)
  : _M_pred(std::move(__pred))
@@ -14216,7 +14125,7 @@ namespace __ops
     };
 
   template<typename _Predicate>
-   
+
     inline _Iter_pred<_Predicate>
     __pred_iter(_Predicate __pred)
     { return _Iter_pred<_Predicate>(std::move(__pred)); }
@@ -14227,7 +14136,7 @@ namespace __ops
       _Compare _M_comp;
       _Value& _M_value;
 
-     
+
       _Iter_comp_to_val(_Compare __comp, _Value& __value)
  : _M_comp(std::move(__comp)), _M_value(__value)
       { }
@@ -14241,7 +14150,7 @@ namespace __ops
 
   template<typename _Compare, typename _Value>
     _Iter_comp_to_val<_Compare, _Value>
-   
+
     __iter_comp_val(_Compare __comp, _Value &__val)
     {
       return _Iter_comp_to_val<_Compare, _Value>(std::move(__comp), __val);
@@ -14253,7 +14162,7 @@ namespace __ops
       _Compare _M_comp;
       _Iterator1 _M_it1;
 
-     
+
       _Iter_comp_to_iter(_Compare __comp, _Iterator1 __it1)
  : _M_comp(std::move(__comp)), _M_it1(__it1)
       { }
@@ -14266,7 +14175,7 @@ namespace __ops
     };
 
   template<typename _Compare, typename _Iterator>
-   
+
     inline _Iter_comp_to_iter<_Compare, _Iterator>
     __iter_comp_iter(_Iter_comp_iter<_Compare> __comp, _Iterator __it)
     {
@@ -14279,7 +14188,7 @@ namespace __ops
     {
       _Predicate _M_pred;
 
-     
+
       explicit
       _Iter_negate(_Predicate __pred)
  : _M_pred(std::move(__pred))
@@ -14293,7 +14202,7 @@ namespace __ops
     };
 
   template<typename _Predicate>
-   
+
     inline _Iter_negate<_Predicate>
     __negate(_Iter_pred<_Predicate> __pred)
     { return _Iter_negate<_Predicate>(std::move(__pred._M_pred)); }
@@ -14307,12 +14216,10 @@ namespace __ops
 
 # 1 "/usr/include/c++/13.2.1/bit" 1 3
 # 32 "/usr/include/c++/13.2.1/bit" 3
-       
 # 33 "/usr/include/c++/13.2.1/bit" 3
 # 55 "/usr/include/c++/13.2.1/bit" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 149 "/usr/include/c++/13.2.1/bit" 3
   template<typename _Tp>
     constexpr _Tp
@@ -14564,29 +14471,25 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 152 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
-   
+
     inline void
     iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
     {
-
-     
-
-     
 # 185 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
       swap(*__a, *__b);
 
     }
 # 201 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
-   
+
     _ForwardIterator2
     swap_ranges(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
   _ForwardIterator2 __first2)
     {
 
-     
 
-     
+
+
 
       ;
 
@@ -14601,7 +14504,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     min(const _Tp& __a, const _Tp& __b)
     {
 
-     
+
 
       if (__b < __a)
  return __b;
@@ -14614,7 +14517,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     max(const _Tp& __a, const _Tp& __b)
     {
 
-     
+
 
       if (__a < __b)
  return __b;
@@ -14646,7 +14549,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _Iterator>
-   
+
     inline _Iterator
     __niter_base(_Iterator __it)
     noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
@@ -14661,14 +14564,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _From, typename _To>
-   
+
     inline _From
     __niter_wrap(_From __from, _To __res)
     { return __from + (__res - std::__niter_base(__from)); }
 
 
   template<typename _Iterator>
-   
+
     inline _Iterator
     __niter_wrap(const _Iterator&, _Iterator __res)
     { return __res; }
@@ -14827,7 +14730,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<bool _IsMove, typename _II, typename _OI>
-   
+
     inline _OI
     __copy_move_a2(_II __first, _II __last, _OI __result)
     {
@@ -14862,13 +14765,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
     __copy_move_a1(_II, _II, std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
 
   template<bool _IsMove, typename _II, typename _OI>
-   
+
     inline _OI
     __copy_move_a1(_II __first, _II __last, _OI __result)
     { return std::__copy_move_a2<_IsMove>(__first, __last, __result); }
 
   template<bool _IsMove, typename _II, typename _OI>
-   
+
     inline _OI
     __copy_move_a(_II __first, _II __last, _OI __result)
     {
@@ -14900,7 +14803,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
 
   template<typename _InputIterator, typename _Size, typename _OutputIterator>
-   
+
     _OutputIterator
     __copy_n_a(_InputIterator __first, _Size __n, _OutputIterator __result,
         bool)
@@ -14936,13 +14839,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
         bool);
 # 621 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II, typename _OI>
-   
+
     inline _OI
     copy(_II __first, _II __last, _OI __result)
     {
 
-     
-     
+
+
 
       ;
 
@@ -14951,13 +14854,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 654 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II, typename _OI>
-   
+
     inline _OI
     move(_II __first, _II __last, _OI __result)
     {
 
-     
-     
+
+
 
       ;
 
@@ -15053,7 +14956,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
   template<bool _IsMove, typename _BI1, typename _BI2>
-   
+
     inline _BI2
     __copy_move_backward_a2(_BI1 __first, _BI1 __last, _BI2 __result)
     {
@@ -15071,7 +14974,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<bool _IsMove, typename _BI1, typename _BI2>
-   
+
     inline _BI2
     __copy_move_backward_a1(_BI1 __first, _BI1 __last, _BI2 __result)
     { return std::__copy_move_backward_a2<_IsMove>(__first, __last, __result); }
@@ -15099,7 +15002,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
 
   template<bool _IsMove, typename _II, typename _OI>
-   
+
     inline _OI
     __copy_move_backward_a(_II __first, _II __last, _OI __result)
     {
@@ -15133,14 +15036,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
   const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
 # 854 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _BI1, typename _BI2>
-   
+
     inline _BI2
     copy_backward(_BI1 __first, _BI1 __last, _BI2 __result)
     {
 
-     
-     
-     
+
+
+
 
       ;
 
@@ -15149,14 +15052,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 889 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _BI1, typename _BI2>
-   
+
     inline _BI2
     move_backward(_BI1 __first, _BI1 __last, _BI2 __result)
     {
 
-     
-     
-     
+
+
+
 
       ;
 
@@ -15171,7 +15074,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _ForwardIterator, typename _Tp>
-   
+
     inline typename
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
     __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
@@ -15182,7 +15085,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _ForwardIterator, typename _Tp>
-   
+
     inline typename
     __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, void>::__type
     __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
@@ -15195,7 +15098,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _Tp>
-   
+
     inline typename
     __gnu_cxx::__enable_if<__is_byte<_Tp>::__value, void>::__type
     __fill_a1(_Tp* __first, _Tp* __last, const _Tp& __c)
@@ -15207,7 +15110,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _Ite, typename _Cont, typename _Tp>
-   
+
     inline void
     __fill_a1(::__gnu_cxx::__normal_iterator<_Ite, _Cont> __first,
        ::__gnu_cxx::__normal_iterator<_Ite, _Cont> __last,
@@ -15220,13 +15123,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
        const std::_Deque_iterator<_Tp, _Tp&, _Tp*>&,
        const _VTp&);
 
- 
+
   void
   __fill_a1(std::_Bit_iterator, std::_Bit_iterator,
      const bool&);
 
   template<typename _FIte, typename _Tp>
-   
+
     inline void
     __fill_a(_FIte __first, _FIte __last, const _Tp& __value)
     { std::__fill_a1(__first, __last, __value); }
@@ -15238,12 +15141,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       const _Tp&);
 # 997 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
-   
+
     inline void
     fill(_ForwardIterator __first, _ForwardIterator __last, const _Tp& __value)
     {
 
-     
+
 
       ;
 
@@ -15282,7 +15185,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-   
+
     inline typename
     __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
     __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
@@ -15293,7 +15196,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-   
+
     inline typename
     __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, _OutputIterator>::__type
     __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
@@ -15312,7 +15215,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         std::input_iterator_tag);
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-   
+
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
         std::output_iterator_tag)
@@ -15324,7 +15227,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-   
+
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
         std::input_iterator_tag)
@@ -15336,7 +15239,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _OutputIterator, typename _Size, typename _Tp>
-   
+
     inline _OutputIterator
     __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
         std::random_access_iterator_tag)
@@ -15354,12 +15257,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1149 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _OI, typename _Size, typename _Tp>
-   
+
     inline _OI
     fill_n(_OI __first, _Size __n, const _Tp& __value)
     {
 
-     
+
 
       return std::__fill_n_a(__first, std::__size_to_integer(__n), __value,
           std::__iterator_category(__first));
@@ -15415,7 +15318,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   std::_Deque_iterator<_Tp, _Ref, _Ptr>);
 
   template<typename _II1, typename _II2>
-   
+
     inline bool
     __equal_aux1(_II1 __first1, _II1 __last1, _II2 __first2)
     {
@@ -15427,7 +15330,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _II1, typename _II2>
-   
+
     inline bool
     __equal_aux(_II1 __first1, _II1 __last1, _II2 __first2)
     {
@@ -15493,7 +15396,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
   template<typename _II1, typename _II2, typename _Compare>
-   
+
     bool
     __lexicographical_compare_impl(_II1 __first1, _II1 __last1,
        _II2 __first2, _II2 __last2,
@@ -15575,7 +15478,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 
   template<typename _II1, typename _II2>
-   
+
     inline bool
     __lexicographical_compare_aux1(_II1 __first1, _II1 __last1,
        _II2 __first2, _II2 __last2)
@@ -15624,7 +15527,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
 
   template<typename _II1, typename _II2>
-   
+
     inline bool
     __lexicographical_compare_aux(_II1 __first1, _II1 __last1,
       _II2 __first2, _II2 __last2)
@@ -15661,7 +15564,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&);
 
   template<typename _ForwardIterator, typename _Tp, typename _Compare>
-   
+
     _ForwardIterator
     __lower_bound(_ForwardIterator __first, _ForwardIterator __last,
     const _Tp& __val, _Compare __comp)
@@ -15689,14 +15592,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1495 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _ForwardIterator, typename _Tp>
-   
+
     inline _ForwardIterator
     lower_bound(_ForwardIterator __first, _ForwardIterator __last,
   const _Tp& __val)
     {
 
-     
-     
+
+
 
       ;
 
@@ -15714,18 +15617,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return std::__bit_width(make_unsigned_t<_Tp>(__n)) - 1;
 # 1531 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
     }
-
-
 # 1547 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
-   
+
     inline bool
     equal(_II1 __first1, _II1 __last1, _II2 __first2)
     {
 
-     
-     
-     
+
+
+
 
 
       ;
@@ -15734,14 +15635,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1578 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-   
+
     inline bool
     equal(_IIter1 __first1, _IIter1 __last1,
    _IIter2 __first2, _BinaryPredicate __binary_pred)
     {
 
-     
-     
+
+
       ;
 
       for (; __first1 != __last1; ++__first1, (void)++__first2)
@@ -15753,7 +15654,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _II1, typename _II2>
-   
+
     inline bool
     __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
     {
@@ -15779,7 +15680,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _II1, typename _II2, typename _BinaryPredicate>
-   
+
     inline bool
     __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2,
       _BinaryPredicate __binary_pred)
@@ -15806,14 +15707,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1668 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
-   
+
     inline bool
     equal(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
     {
 
-     
-     
-     
+
+
+
 
 
       ;
@@ -15823,14 +15724,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1701 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-   
+
     inline bool
     equal(_IIter1 __first1, _IIter1 __last1,
    _IIter2 __first2, _IIter2 __last2, _BinaryPredicate __binary_pred)
     {
 
-     
-     
+
+
       ;
       ;
 
@@ -15839,20 +15740,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1733 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2>
-   
+
     inline bool
     lexicographical_compare(_II1 __first1, _II1 __last1,
        _II2 __first2, _II2 __last2)
     {
-
-
-
-
-
-     
-     
-     
-     
+# 1748 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
       ;
       ;
 
@@ -15861,14 +15754,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1768 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _II1, typename _II2, typename _Compare>
-   
+
     inline bool
     lexicographical_compare(_II1 __first1, _II1 __last1,
        _II2 __first2, _II2 __last2, _Compare __comp)
     {
 
-     
-     
+
+
       ;
       ;
 
@@ -15879,7 +15772,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 1880 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
-   
+
     pair<_InputIterator1, _InputIterator2>
     __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
         _InputIterator2 __first2, _BinaryPredicate __binary_pred)
@@ -15893,15 +15786,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1908 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
-   
+
     inline pair<_InputIterator1, _InputIterator2>
     mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
       _InputIterator2 __first2)
     {
 
-     
-     
-     
+
+
+
 
 
       ;
@@ -15912,14 +15805,14 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 1942 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
-   
+
     inline pair<_InputIterator1, _InputIterator2>
     mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
       _InputIterator2 __first2, _BinaryPredicate __binary_pred)
     {
 
-     
-     
+
+
       ;
 
       return std::__mismatch(__first1, __last1, __first2,
@@ -15930,7 +15823,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
-   
+
     pair<_InputIterator1, _InputIterator2>
     __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
         _InputIterator2 __first2, _InputIterator2 __last2,
@@ -15946,15 +15839,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 1991 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2>
-   
+
     inline pair<_InputIterator1, _InputIterator2>
     mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
       _InputIterator2 __first2, _InputIterator2 __last2)
     {
 
-     
-     
-     
+
+
+
 
 
       ;
@@ -15966,15 +15859,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 2027 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _InputIterator1, typename _InputIterator2,
     typename _BinaryPredicate>
-   
+
     inline pair<_InputIterator1, _InputIterator2>
     mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
       _InputIterator2 __first2, _InputIterator2 __last2,
       _BinaryPredicate __binary_pred)
     {
 
-     
-     
+
+
       ;
       ;
 
@@ -15987,7 +15880,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _InputIterator, typename _Predicate>
-   
+
     inline _InputIterator
     __find_if(_InputIterator __first, _InputIterator __last,
        _Predicate __pred, input_iterator_tag)
@@ -15999,7 +15892,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename _RandomAccessIterator, typename _Predicate>
-   
+
     _RandomAccessIterator
     __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
        _Predicate __pred, random_access_iterator_tag)
@@ -16050,7 +15943,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _Iterator, typename _Predicate>
-   
+
     inline _Iterator
     __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
     {
@@ -16059,7 +15952,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _InputIterator, typename _Predicate>
-   
+
     typename iterator_traits<_InputIterator>::difference_type
     __count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
     {
@@ -16071,7 +15964,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _ForwardIterator, typename _Predicate>
-   
+
     _ForwardIterator
     __remove_if(_ForwardIterator __first, _ForwardIterator __last,
   _Predicate __pred)
@@ -16093,7 +15986,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _ForwardIterator1, typename _ForwardIterator2,
     typename _BinaryPredicate>
-   
+
     bool
     __is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
        _ForwardIterator2 __first2, _BinaryPredicate __pred)
@@ -16130,15 +16023,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 2204 "/usr/include/c++/13.2.1/bits/stl_algobase.h" 3
   template<typename _ForwardIterator1, typename _ForwardIterator2>
-   
+
     inline bool
     is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
      _ForwardIterator2 __first2)
     {
 
-     
-     
-     
+
+
+
 
 
       ;
@@ -16153,7 +16046,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 52 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/refwrap.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/refwrap.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/refwrap.h" 3
 
 
@@ -16161,12 +16053,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/invoke.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/invoke.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/invoke.h" 3
 # 42 "/usr/include/c++/13.2.1/bits/invoke.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 53 "/usr/include/c++/13.2.1/bits/invoke.h" 3
   template<typename _Tp, typename _Up = typename __inv_unwrap<_Tp>::type>
     constexpr _Up&&
@@ -16241,7 +16131,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 52 "/usr/include/c++/13.2.1/bits/refwrap.h" 3
   template<typename _Res, typename... _ArgTypes>
     struct _Maybe_unary_or_binary_function { };
@@ -16476,7 +16365,7 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
     {
       _Tp* _M_data;
 
-     
+
       static _Tp* _S_fun(_Tp& __r) noexcept { return std::__addressof(__r); }
 
       static void _S_fun(_Tp&&) = delete;
@@ -16504,11 +16393,11 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
       reference_wrapper&
       operator=(const reference_wrapper&) = default;
 
-     
+
       operator _Tp&() const noexcept
       { return this->get(); }
 
-     
+
       _Tp&
       get() const noexcept
       { return *_M_data; }
@@ -16536,14 +16425,14 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
 
 
   template<typename _Tp>
-   
+
     inline reference_wrapper<_Tp>
     ref(_Tp& __t) noexcept
     { return reference_wrapper<_Tp>(__t); }
 
 
   template<typename _Tp>
-   
+
     inline reference_wrapper<const _Tp>
     cref(const _Tp& __t) noexcept
     { return reference_wrapper<const _Tp>(__t); }
@@ -16556,14 +16445,14 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
 
 
   template<typename _Tp>
-   
+
     inline reference_wrapper<_Tp>
     ref(reference_wrapper<_Tp> __t) noexcept
     { return __t; }
 
 
   template<typename _Tp>
-   
+
     inline reference_wrapper<const _Tp>
     cref(reference_wrapper<_Tp> __t) noexcept
     { return { __t.get() }; }
@@ -16575,13 +16464,11 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
 # 53 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/range_access.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/range_access.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/range_access.h" 3
 
 
 # 1 "/usr/include/c++/13.2.1/initializer_list" 1 3
 # 33 "/usr/include/c++/13.2.1/initializer_list" 3
-       
 # 34 "/usr/include/c++/13.2.1/initializer_list" 3
 
 
@@ -16960,12 +16847,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 54 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/basic_string.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
 
 # 1 "/usr/include/c++/13.2.1/ext/alloc_traits.h" 1 3
 # 32 "/usr/include/c++/13.2.1/ext/alloc_traits.h" 3
-       
 # 33 "/usr/include/c++/13.2.1/ext/alloc_traits.h" 3
 
 # 1 "/usr/include/c++/13.2.1/bits/alloc_traits.h" 1 3
@@ -16991,7 +16876,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 106 "/usr/include/c++/13.2.1/bits/stl_construct.h" 3
   template<typename _Tp, typename... _Args>
-   
+
     inline void
     _Construct(_Tp* __p, _Args&&... __args)
     {
@@ -17798,7 +17683,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   template<typename _Tp>
     struct __shrink_to_fit_aux<_Tp, true>
     {
-     
+
       static bool
       _S_do_it(_Tp& __c) noexcept
       {
@@ -17819,7 +17704,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     };
 # 925 "/usr/include/c++/13.2.1/bits/alloc_traits.h" 3
   template<typename _ForwardIterator, typename _Allocator>
-   
+
     void
     _Destroy(_ForwardIterator __first, _ForwardIterator __last,
       _Allocator& __alloc)
@@ -17955,7 +17840,6 @@ template<typename _Alloc, typename = typename _Alloc::value_type>
 
 # 1 "/usr/include/c++/13.2.1/string_view" 1 3
 # 36 "/usr/include/c++/13.2.1/string_view" 3
-       
 # 37 "/usr/include/c++/13.2.1/string_view" 3
 
 
@@ -17964,7 +17848,6 @@ template<typename _Alloc, typename = typename _Alloc::value_type>
 
 # 1 "/usr/include/c++/13.2.1/bits/functional_hash.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/functional_hash.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/functional_hash.h" 3
 
 
@@ -17972,7 +17855,6 @@ template<typename _Alloc, typename = typename _Alloc::value_type>
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 50 "/usr/include/c++/13.2.1/bits/functional_hash.h" 3
   template<typename _Result, typename _Arg>
     struct __hash_base
@@ -18186,7 +18068,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 56 "/usr/include/c++/13.2.1/string_view" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 69 "/usr/include/c++/13.2.1/string_view" 3
   constexpr size_t
   __sv_check(size_t __size, size_t __pos, const char* __s)
@@ -18387,7 +18268,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 
-     
+
       size_type
       copy(_CharT* __str, size_type __n, size_type __pos = 0) const
       {
@@ -18847,7 +18728,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/string_view.tcc" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/string_view.tcc" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/string_view.tcc" 3
 
 
@@ -19118,7 +18998,7 @@ namespace __cxx11 {
    _Res>;
 
 
-     
+
       static __sv_type
       _S_to_string_view(__sv_type __svt) noexcept
       { return __svt; }
@@ -19134,14 +19014,7 @@ namespace __cxx11 {
 
  __sv_type _M_sv;
       };
-
-
-
-
-
-
-
-     
+# 175 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       explicit
       basic_string(__sv_wrapper __svw, const _Alloc& __a)
       : basic_string(__svw._M_sv.data(), __svw._M_sv.size(), __a) { }
@@ -19177,22 +19050,22 @@ namespace __cxx11 {
  size_type _M_allocated_capacity;
       };
 
-     
+
       void
       _M_data(pointer __p)
       { _M_dataplus._M_p = __p; }
 
-     
+
       void
       _M_length(size_type __length)
       { _M_string_length = __length; }
 
-     
+
       pointer
       _M_data() const
       { return _M_dataplus._M_p; }
 
-     
+
       pointer
       _M_local_data()
       {
@@ -19203,7 +19076,7 @@ namespace __cxx11 {
 
       }
 
-     
+
       const_pointer
       _M_local_data() const
       {
@@ -19214,12 +19087,12 @@ namespace __cxx11 {
 
       }
 
-     
+
       void
       _M_capacity(size_type __capacity)
       { _M_allocated_capacity = __capacity; }
 
-     
+
       void
       _M_set_length(size_type __n)
       {
@@ -19227,7 +19100,7 @@ namespace __cxx11 {
  traits_type::assign(_M_data()[__n], _CharT());
       }
 
-     
+
       bool
       _M_is_local() const
       {
@@ -19241,11 +19114,11 @@ namespace __cxx11 {
       }
 
 
-     
+
       pointer
       _M_create(size_type&, size_type);
 
-     
+
       void
       _M_dispose()
       {
@@ -19253,7 +19126,7 @@ namespace __cxx11 {
    _M_destroy(_M_allocated_capacity);
       }
 
-     
+
       void
       _M_destroy(size_type __size) throw()
       { _Alloc_traits::deallocate(_M_get_allocator(), _M_data(), __size + 1); }
@@ -19272,16 +19145,16 @@ namespace __cxx11 {
         _M_construct(_FwdIterator __beg, _FwdIterator __end,
        std::forward_iterator_tag);
 
-     
+
       void
       _M_construct(size_type __req, _CharT __c);
 
-     
+
       allocator_type&
       _M_get_allocator()
       { return _M_dataplus; }
 
-     
+
       const allocator_type&
       _M_get_allocator() const
       { return _M_dataplus; }
@@ -19302,7 +19175,7 @@ namespace __cxx11 {
 
     private:
 # 374 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       size_type
       _M_check(size_type __pos, const char* __s) const
       {
@@ -19313,7 +19186,7 @@ namespace __cxx11 {
  return __pos;
       }
 
-     
+
       void
       _M_check_length(size_type __n1, size_type __n2, const char* __s) const
       {
@@ -19323,7 +19196,7 @@ namespace __cxx11 {
 
 
 
-     
+
       size_type
       _M_limit(size_type __pos, size_type __off) const noexcept
       {
@@ -19341,7 +19214,7 @@ namespace __cxx11 {
 
 
 
-     
+
       static void
       _S_copy(_CharT* __d, const _CharT* __s, size_type __n)
       {
@@ -19351,7 +19224,7 @@ namespace __cxx11 {
    traits_type::copy(__d, __s, __n);
       }
 
-     
+
       static void
       _S_move(_CharT* __d, const _CharT* __s, size_type __n)
       {
@@ -19361,7 +19234,7 @@ namespace __cxx11 {
    traits_type::move(__d, __s, __n);
       }
 
-     
+
       static void
       _S_assign(_CharT* __d, size_type __n, _CharT __c)
       {
@@ -19382,29 +19255,29 @@ namespace __cxx11 {
      traits_type::assign(*__p, *__k1);
  }
 
-     
+
       static void
       _S_copy_chars(_CharT* __p, iterator __k1, iterator __k2) noexcept
       { _S_copy_chars(__p, __k1.base(), __k2.base()); }
 
-     
+
       static void
       _S_copy_chars(_CharT* __p, const_iterator __k1, const_iterator __k2)
       noexcept
       { _S_copy_chars(__p, __k1.base(), __k2.base()); }
 
-     
+
       static void
       _S_copy_chars(_CharT* __p, _CharT* __k1, _CharT* __k2) noexcept
       { _S_copy(__p, __k1, __k2 - __k1); }
 
-     
+
       static void
       _S_copy_chars(_CharT* __p, const _CharT* __k1, const _CharT* __k2)
       noexcept
       { _S_copy(__p, __k1, __k2 - __k1); }
 
-     
+
       static int
       _S_compare(size_type __n1, size_type __n2) noexcept
       {
@@ -19418,28 +19291,21 @@ namespace __cxx11 {
    return int(__d);
       }
 
-     
+
       void
       _M_assign(const basic_string&);
 
-     
+
       void
       _M_mutate(size_type __pos, size_type __len1, const _CharT* __s,
   size_type __len2);
 
-     
+
       void
       _M_erase(size_type __pos, size_type __n);
 
     public:
-
-
-
-
-
-
-
-     
+# 512 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string()
       noexcept(is_nothrow_default_constructible<_Alloc>::value)
       : _M_dataplus(_M_local_data())
@@ -19451,7 +19317,7 @@ namespace __cxx11 {
 
 
 
-     
+
       explicit
       basic_string(const _Alloc& __a) noexcept
       : _M_dataplus(_M_local_data(), __a)
@@ -19464,7 +19330,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string(const basic_string& __str)
       : _M_dataplus(_M_local_data(),
       _Alloc_traits::_S_select_on_copy(__str._M_get_allocator()))
@@ -19473,7 +19339,7 @@ namespace __cxx11 {
        std::forward_iterator_tag());
       }
 # 553 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string(const basic_string& __str, size_type __pos,
      const _Alloc& __a = _Alloc())
       : _M_dataplus(_M_local_data(), __a)
@@ -19483,14 +19349,7 @@ namespace __cxx11 {
  _M_construct(__start, __start + __str._M_limit(__pos, npos),
        std::forward_iterator_tag());
       }
-
-
-
-
-
-
-
-     
+# 571 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string(const basic_string& __str, size_type __pos,
      size_type __n)
       : _M_dataplus(_M_local_data())
@@ -19501,7 +19360,7 @@ namespace __cxx11 {
        std::forward_iterator_tag());
       }
 # 588 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string(const basic_string& __str, size_type __pos,
      size_type __n, const _Alloc& __a)
       : _M_dataplus(_M_local_data(), __a)
@@ -19512,7 +19371,7 @@ namespace __cxx11 {
        std::forward_iterator_tag());
       }
 # 608 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string(const _CharT* __s, size_type __n,
      const _Alloc& __a = _Alloc())
       : _M_dataplus(_M_local_data(), __a)
@@ -19526,7 +19385,7 @@ namespace __cxx11 {
 # 628 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       template<typename = _RequireAllocator<_Alloc>>
 
-     
+
       basic_string(const _CharT* __s, const _Alloc& __a = _Alloc())
       : _M_dataplus(_M_local_data(), __a)
       {
@@ -19540,12 +19399,12 @@ namespace __cxx11 {
 # 651 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       template<typename = _RequireAllocator<_Alloc>>
 
-     
+
       basic_string(size_type __n, _CharT __c, const _Alloc& __a = _Alloc())
       : _M_dataplus(_M_local_data(), __a)
       { _M_construct(__n, __c); }
 # 666 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string(basic_string&& __str) noexcept
       : _M_dataplus(_M_local_data(), std::move(__str._M_get_allocator()))
       {
@@ -19573,17 +19432,17 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string(initializer_list<_CharT> __l, const _Alloc& __a = _Alloc())
       : _M_dataplus(_M_local_data(), __a)
       { _M_construct(__l.begin(), __l.end(), std::forward_iterator_tag()); }
 
-     
+
       basic_string(const basic_string& __str, const _Alloc& __a)
       : _M_dataplus(_M_local_data(), __a)
       { _M_construct(__str.begin(), __str.end(), std::forward_iterator_tag()); }
 
-     
+
       basic_string(basic_string&& __str, const _Alloc& __a)
       noexcept(_Alloc_traits::_S_always_equal())
       : _M_dataplus(_M_local_data(), __a)
@@ -19648,7 +19507,7 @@ namespace __cxx11 {
 
 
 
-     
+
       ~basic_string()
       { _M_dispose(); }
 
@@ -19656,7 +19515,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       operator=(const basic_string& __str)
       {
@@ -19667,12 +19526,12 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       operator=(const _CharT* __s)
       { return this->assign(__s); }
 # 821 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       operator=(_CharT __c)
       {
@@ -19680,7 +19539,7 @@ namespace __cxx11 {
  return *this;
       }
 # 839 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       operator=(basic_string&& __str)
       noexcept(_Alloc_traits::_S_nothrow_move())
@@ -19748,7 +19607,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       operator=(initializer_list<_CharT> __l)
       {
@@ -19763,7 +19622,7 @@ namespace __cxx11 {
 
 
      template<typename _Tp>
-      
+
        _If_sv<_Tp, basic_string&>
        operator=(const _Tp& __svt)
        { return this->assign(__svt); }
@@ -19772,7 +19631,7 @@ namespace __cxx11 {
 
 
 
-     
+
       operator __sv_type() const noexcept
       { return __sv_type(data(), size()); }
 
@@ -19916,11 +19775,11 @@ namespace __cxx11 {
       max_size() const noexcept
       { return (_Alloc_traits::max_size(_M_get_allocator()) - 1) / 2; }
 # 1085 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       void
       resize(size_type __n, _CharT __c);
 # 1099 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       void
       resize(size_type __n)
       { this->resize(__n, _CharT()); }
@@ -19929,7 +19788,7 @@ namespace __cxx11 {
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-     
+
       void
       shrink_to_fit() noexcept
       { reserve(); }
@@ -19943,24 +19802,17 @@ namespace __cxx11 {
                       : _M_allocated_capacity;
       }
 # 1180 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       void
       reserve(size_type __res_arg);
-
-
-
-
-
-
-
-     
+# 1191 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       void
       reserve();
 
 
 
 
-     
+
       void
       clear() noexcept
       { _M_set_length(0); }
@@ -20067,7 +19919,7 @@ namespace __cxx11 {
  return operator[](this->size() - 1);
       }
 # 1352 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       operator+=(const basic_string& __str)
       { return this->append(__str); }
@@ -20077,7 +19929,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       operator+=(const _CharT* __s)
       { return this->append(__s); }
@@ -20087,21 +19939,14 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       operator+=(_CharT __c)
       {
  this->push_back(__c);
  return *this;
       }
-
-
-
-
-
-
-
-     
+# 1387 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string&
       operator+=(initializer_list<_CharT> __l)
       { return this->append(__l.begin(), __l.size()); }
@@ -20111,32 +19956,18 @@ namespace __cxx11 {
  _If_sv<_Tp, basic_string&>
  operator+=(const _Tp& __svt)
  { return this->append(__svt); }
-
-
-
-
-
-
-
-     
+# 1411 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string&
       append(const basic_string& __str)
       { return this->append(__str._M_data(), __str.size()); }
 # 1428 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       append(const basic_string& __str, size_type __pos, size_type __n = npos)
       { return this->append(__str._M_data()
        + __str._M_check(__pos, "basic_string::append"),
        __str._M_limit(__pos, __n)); }
-
-
-
-
-
-
-
-     
+# 1442 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string&
       append(const _CharT* __s, size_type __n)
       {
@@ -20150,7 +19981,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       append(const _CharT* __s)
       {
@@ -20160,18 +19991,11 @@ namespace __cxx11 {
  return _M_append(__s, __n);
       }
 # 1473 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       append(size_type __n, _CharT __c)
       { return _M_replace_aux(this->size(), size_type(0), __n, __c); }
-
-
-
-
-
-
-
-     
+# 1485 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string&
       append(initializer_list<_CharT> __l)
       { return this->append(__l.begin(), __l.size()); }
@@ -20217,7 +20041,7 @@ namespace __cxx11 {
 
 
 
-     
+
       void
       push_back(_CharT __c)
       {
@@ -20233,7 +20057,7 @@ namespace __cxx11 {
 
 
 
-     
+
       basic_string&
       assign(const basic_string& __str)
       {
@@ -20270,7 +20094,7 @@ namespace __cxx11 {
  return *this;
       }
 # 1609 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       assign(basic_string&& __str)
       noexcept(_Alloc_traits::_S_nothrow_move())
@@ -20280,14 +20104,14 @@ namespace __cxx11 {
  return *this = std::move(__str);
       }
 # 1633 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       assign(const basic_string& __str, size_type __pos, size_type __n = npos)
       { return _M_replace(size_type(0), this->size(), __str._M_data()
      + __str._M_check(__pos, "basic_string::assign"),
      __str._M_limit(__pos, __n)); }
 # 1650 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       assign(const _CharT* __s, size_type __n)
       {
@@ -20295,7 +20119,7 @@ namespace __cxx11 {
  return _M_replace(size_type(0), this->size(), __s, __n);
       }
 # 1667 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       assign(const _CharT* __s)
       {
@@ -20304,7 +20128,7 @@ namespace __cxx11 {
      traits_type::length(__s));
       }
 # 1685 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       assign(size_type __n, _CharT __c)
       { return _M_replace_aux(size_type(0), this->size(), __n, __c); }
@@ -20318,14 +20142,7 @@ namespace __cxx11 {
         basic_string&
         assign(_InputIterator __first, _InputIterator __last)
         { return this->replace(begin(), end(), __first, __last); }
-
-
-
-
-
-
-
-     
+# 1716 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       basic_string&
       assign(initializer_list<_CharT> __l)
       { return this->assign(__l.begin(), __l.size()); }
@@ -20351,7 +20168,7 @@ namespace __cxx11 {
        std::__sv_limit(__sv.size(), __pos, __n));
  }
 # 1772 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       iterator
       insert(const_iterator __p, size_type __n, _CharT __c)
       {
@@ -20373,18 +20190,18 @@ namespace __cxx11 {
    return iterator(this->_M_data() + __pos);
  }
 # 1852 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       iterator
       insert(const_iterator __p, initializer_list<_CharT> __l)
       { return this->insert(__p, __l.begin(), __l.end()); }
 # 1880 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       insert(size_type __pos1, const basic_string& __str)
       { return this->replace(__pos1, size_type(0),
         __str._M_data(), __str.size()); }
 # 1904 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       insert(size_type __pos1, const basic_string& __str,
       size_type __pos2, size_type __n = npos)
@@ -20392,12 +20209,12 @@ namespace __cxx11 {
         + __str._M_check(__pos2, "basic_string::insert"),
         __str._M_limit(__pos2, __n)); }
 # 1928 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       insert(size_type __pos, const _CharT* __s, size_type __n)
       { return this->replace(__pos, size_type(0), __s, __n); }
 # 1948 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       insert(size_type __pos, const _CharT* __s)
       {
@@ -20406,13 +20223,13 @@ namespace __cxx11 {
         traits_type::length(__s));
       }
 # 1973 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       insert(size_type __pos, size_type __n, _CharT __c)
       { return _M_replace_aux(_M_check(__pos, "basic_string::insert"),
          size_type(0), __n, __c); }
 # 1992 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       iterator
       insert(__const_iterator __p, _CharT __c)
       {
@@ -20444,7 +20261,7 @@ namespace __cxx11 {
        std::__sv_limit(__sv.size(), __pos2, __n));
  }
 # 2055 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       erase(size_type __pos = 0, size_type __n = npos)
       {
@@ -20456,7 +20273,7 @@ namespace __cxx11 {
  return *this;
       }
 # 2075 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       iterator
       erase(__const_iterator __position)
       {
@@ -20467,7 +20284,7 @@ namespace __cxx11 {
  return iterator(_M_data() + __pos);
       }
 # 2095 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       iterator
       erase(__const_iterator __first, __const_iterator __last)
       {
@@ -20480,14 +20297,7 @@ namespace __cxx11 {
    this->_M_erase(__pos, __last - __first);
  return iterator(this->_M_data() + __pos);
       }
-
-
-
-
-
-
-
-     
+# 2116 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
       void
       pop_back() noexcept
       {
@@ -20495,12 +20305,12 @@ namespace __cxx11 {
  _M_erase(size() - 1, 1);
       }
 # 2141 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(size_type __pos, size_type __n, const basic_string& __str)
       { return this->replace(__pos, __n, __str._M_data(), __str.size()); }
 # 2164 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(size_type __pos1, size_type __n1, const basic_string& __str,
        size_type __pos2, size_type __n2 = npos)
@@ -20508,7 +20318,7 @@ namespace __cxx11 {
         + __str._M_check(__pos2, "basic_string::replace"),
         __str._M_limit(__pos2, __n2)); }
 # 2190 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(size_type __pos, size_type __n1, const _CharT* __s,
        size_type __n2)
@@ -20518,7 +20328,7 @@ namespace __cxx11 {
      _M_limit(__pos, __n1), __s, __n2);
       }
 # 2216 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(size_type __pos, size_type __n1, const _CharT* __s)
       {
@@ -20526,19 +20336,19 @@ namespace __cxx11 {
  return this->replace(__pos, __n1, __s, traits_type::length(__s));
       }
 # 2241 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(size_type __pos, size_type __n1, size_type __n2, _CharT __c)
       { return _M_replace_aux(_M_check(__pos, "basic_string::replace"),
          _M_limit(__pos, __n1), __n2, __c); }
 # 2260 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        const basic_string& __str)
       { return this->replace(__i1, __i2, __str._M_data(), __str.size()); }
 # 2281 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        const _CharT* __s, size_type __n)
@@ -20548,7 +20358,7 @@ namespace __cxx11 {
  return this->replace(__i1 - begin(), __i2 - __i1, __s, __n);
       }
 # 2304 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2, const _CharT* __s)
       {
@@ -20556,7 +20366,7 @@ namespace __cxx11 {
  return this->replace(__i1, __i2, __s, traits_type::length(__s));
       }
 # 2326 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2, size_type __n,
        _CharT __c)
@@ -20573,14 +20383,14 @@ namespace __cxx11 {
         replace(const_iterator __i1, const_iterator __i2,
   _InputIterator __k1, _InputIterator __k2)
         {
-  
+
                         ;
    ;
    return this->_M_replace_dispatch(__i1, __i2, __k1, __k2,
         std::__false_type());
  }
 # 2385 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        _CharT* __k1, _CharT* __k2)
@@ -20592,7 +20402,7 @@ namespace __cxx11 {
         __k1, __k2 - __k1);
       }
 
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        const _CharT* __k1, const _CharT* __k2)
@@ -20604,7 +20414,7 @@ namespace __cxx11 {
         __k1, __k2 - __k1);
       }
 
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        iterator __k1, iterator __k2)
@@ -20616,7 +20426,7 @@ namespace __cxx11 {
         __k1.base(), __k2 - __k1);
       }
 
-     
+
       basic_string&
       replace(__const_iterator __i1, __const_iterator __i2,
        const_iterator __k1, const_iterator __k2)
@@ -20628,7 +20438,7 @@ namespace __cxx11 {
         __k1.base(), __k2 - __k1);
       }
 # 2448 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       basic_string& replace(const_iterator __i1, const_iterator __i2,
        initializer_list<_CharT> __l)
       { return this->replace(__i1, __i2, __l.begin(), __l.size()); }
@@ -20680,7 +20490,7 @@ namespace __cxx11 {
        _InputIterator __k1, _InputIterator __k2,
        __false_type);
 
-     
+
       basic_string&
       _M_replace_aux(size_type __pos1, size_type __n1, size_type __n2,
        _CharT __c);
@@ -20689,22 +20499,22 @@ namespace __cxx11 {
       _M_replace_cold(pointer __p, size_type __len1, const _CharT* __s,
         const size_type __len2, const size_type __how_much);
 
-     
+
       basic_string&
       _M_replace(size_type __pos, size_type __len1, const _CharT* __s,
    const size_type __len2);
 
-     
+
       basic_string&
       _M_append(const _CharT* __s, size_type __n);
 
     public:
 # 2559 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       size_type
       copy(_CharT* __s, size_type __n, size_type __pos = 0) const;
 # 2570 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
-     
+
       void
       swap(basic_string& __s) noexcept;
 # 2581 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
@@ -21119,7 +20929,7 @@ namespace __cxx11 {
 
 
   template<typename _Str>
-   
+
     inline _Str
     __str_concat(typename _Str::value_type const* __lhs,
    typename _Str::size_type __lhs_len,
@@ -21228,7 +21038,7 @@ namespace __cxx11 {
     { return std::move(__lhs.append(__rhs)); }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     inline basic_string<_CharT, _Traits, _Alloc>
     operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
        basic_string<_CharT, _Traits, _Alloc>&& __rhs)
@@ -21490,7 +21300,7 @@ namespace __cxx11 {
     { return __rhs.compare(__lhs) <= 0; }
 # 3979 "/usr/include/c++/13.2.1/bits/basic_string.h" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     inline void
     swap(basic_string<_CharT, _Traits, _Alloc>& __lhs,
   basic_string<_CharT, _Traits, _Alloc>& __rhs)
@@ -21562,12 +21372,10 @@ namespace __cxx11 {
 
 # 1 "/usr/include/c++/13.2.1/ext/string_conversions.h" 1 3
 # 32 "/usr/include/c++/13.2.1/ext/string_conversions.h" 3
-       
 # 33 "/usr/include/c++/13.2.1/ext/string_conversions.h" 3
 # 43 "/usr/include/c++/13.2.1/ext/string_conversions.h" 3
 # 1 "/usr/include/c++/13.2.1/cstdlib" 1 3
 # 39 "/usr/include/c++/13.2.1/cstdlib" 3
-       
 # 40 "/usr/include/c++/13.2.1/cstdlib" 3
 # 79 "/usr/include/c++/13.2.1/cstdlib" 3
 # 1 "/usr/include/stdlib.h" 1 3 4
@@ -22692,7 +22500,6 @@ extern int getloadavg (double __loadavg[], int __nelem)
 
 # 1 "/usr/include/c++/13.2.1/bits/std_abs.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/std_abs.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/std_abs.h" 3
 # 46 "/usr/include/c++/13.2.1/bits/std_abs.h" 3
 extern "C++"
@@ -22869,12 +22676,10 @@ namespace std
 # 44 "/usr/include/c++/13.2.1/ext/string_conversions.h" 2 3
 # 1 "/usr/include/c++/13.2.1/cwchar" 1 3
 # 39 "/usr/include/c++/13.2.1/cwchar" 3
-       
 # 40 "/usr/include/c++/13.2.1/cwchar" 3
 # 45 "/usr/include/c++/13.2.1/ext/string_conversions.h" 2 3
 # 1 "/usr/include/c++/13.2.1/cstdio" 1 3
 # 39 "/usr/include/c++/13.2.1/cstdio" 3
-       
 # 40 "/usr/include/c++/13.2.1/cstdio" 3
 
 
@@ -23612,7 +23417,6 @@ namespace std
 # 46 "/usr/include/c++/13.2.1/ext/string_conversions.h" 2 3
 # 1 "/usr/include/c++/13.2.1/cerrno" 1 3
 # 39 "/usr/include/c++/13.2.1/cerrno" 3
-       
 # 40 "/usr/include/c++/13.2.1/cerrno" 3
 
 
@@ -23740,7 +23544,6 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 # 4098 "/usr/include/c++/13.2.1/bits/basic_string.h" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/charconv.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/charconv.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/charconv.h" 3
 
 
@@ -24222,7 +24025,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 55 "/usr/include/c++/13.2.1/string" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/basic_string.tcc" 1 3
 # 42 "/usr/include/c++/13.2.1/bits/basic_string.tcc" 3
-       
 # 43 "/usr/include/c++/13.2.1/bits/basic_string.tcc" 3
 
 
@@ -24238,7 +24040,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     basic_string<_CharT, _Traits, _Alloc>::npos;
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     swap(basic_string& __s) noexcept
@@ -24313,7 +24115,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::pointer
     basic_string<_CharT, _Traits, _Alloc>::
     _M_create(size_type& __capacity, size_type __old_capacity)
@@ -24345,7 +24147,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _CharT, typename _Traits, typename _Alloc>
     template<typename _InIterator>
-     
+
       void
       basic_string<_CharT, _Traits, _Alloc>::
       _M_construct(_InIterator __beg, _InIterator __end,
@@ -24364,10 +24166,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
  struct _Guard
  {
-  
+
    explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
 
-  
+
    ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
 
    basic_string* _M_guarded;
@@ -24396,7 +24198,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _CharT, typename _Traits, typename _Alloc>
     template<typename _InIterator>
-     
+
       void
       basic_string<_CharT, _Traits, _Alloc>::
       _M_construct(_InIterator __beg, _InIterator __end,
@@ -24415,10 +24217,10 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
  struct _Guard
  {
-  
+
    explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
 
-  
+
    ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
 
    basic_string* _M_guarded;
@@ -24432,7 +24234,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     _M_construct(size_type __n, _CharT __c)
@@ -24452,7 +24254,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     _M_assign(const basic_string& __str)
@@ -24479,7 +24281,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     reserve(size_type __res)
@@ -24500,7 +24302,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     _M_mutate(size_type __pos, size_type __len1, const _CharT* __s,
@@ -24525,7 +24327,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     _M_erase(size_type __pos, size_type __n)
@@ -24539,7 +24341,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     reserve()
@@ -24574,7 +24376,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     void
     basic_string<_CharT, _Traits, _Alloc>::
     resize(size_type __n, _CharT __c)
@@ -24587,7 +24389,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     basic_string<_CharT, _Traits, _Alloc>&
     basic_string<_CharT, _Traits, _Alloc>::
     _M_append(const _CharT* __s, size_type __n)
@@ -24608,7 +24410,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
   template<typename _CharT, typename _Traits, typename _Alloc>
     template<typename _InputIterator>
-     
+
       basic_string<_CharT, _Traits, _Alloc>&
       basic_string<_CharT, _Traits, _Alloc>::
       _M_replace_dispatch(const_iterator __i1, const_iterator __i2,
@@ -24624,7 +24426,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     basic_string<_CharT, _Traits, _Alloc>&
     basic_string<_CharT, _Traits, _Alloc>::
     _M_replace_aux(size_type __pos1, size_type __n1, size_type __n2,
@@ -24685,7 +24487,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     basic_string<_CharT, _Traits, _Alloc>&
     basic_string<_CharT, _Traits, _Alloc>::
     _M_replace(size_type __pos, size_type __len1, const _CharT* __s,
@@ -24720,7 +24522,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     copy(_CharT* __s, size_type __n, size_type __pos) const
@@ -24735,7 +24537,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 # 609 "/usr/include/c++/13.2.1/bits/basic_string.tcc" 3
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24772,7 +24574,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find(_CharT __c, size_type __pos) const noexcept
@@ -24791,7 +24593,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     rfind(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24814,7 +24616,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     rfind(_CharT __c, size_type __pos) const noexcept
@@ -24832,7 +24634,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_first_of(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24849,7 +24651,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_last_of(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24872,7 +24674,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_first_not_of(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24886,7 +24688,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_first_not_of(_CharT __c, size_type __pos) const noexcept
@@ -24898,7 +24700,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_last_not_of(const _CharT* __s, size_type __pos, size_type __n) const
@@ -24921,7 +24723,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
   template<typename _CharT, typename _Traits, typename _Alloc>
-   
+
     typename basic_string<_CharT, _Traits, _Alloc>::size_type
     basic_string<_CharT, _Traits, _Alloc>::
     find_last_not_of(_CharT __c, size_type __pos) const noexcept
@@ -25120,7 +24922,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/memory_resource.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/memory_resource.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/memory_resource.h" 3
 
 
@@ -25128,7 +24929,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/cstddef" 1 3
 # 42 "/usr/include/c++/13.2.1/cstddef" 3
-       
 # 43 "/usr/include/c++/13.2.1/cstddef" 3
 
 
@@ -25348,7 +25148,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
       __uses_alloc<uses_allocator<_Tp, _Alloc>::value, _Tp, _Alloc, _Args...>;
 
   template<typename _Tp, typename _Alloc, typename... _Args>
-   
+
     inline __uses_alloc_t<_Tp, _Alloc, _Args...>
     __use_alloc(const _Alloc& __a)
     {
@@ -25433,7 +25233,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 41 "/usr/include/c++/13.2.1/bits/memory_resource.h" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/uses_allocator_args.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/uses_allocator_args.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/uses_allocator_args.h" 3
 # 42 "/usr/include/c++/13.2.1/bits/memory_resource.h" 2 3
 
@@ -25443,7 +25242,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/tuple" 1 3
 # 32 "/usr/include/c++/13.2.1/tuple" 3
-       
 # 33 "/usr/include/c++/13.2.1/tuple" 3
 # 48 "/usr/include/c++/13.2.1/tuple" 3
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -25492,7 +25290,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  constexpr _Head_base(_UHead&& __h)
  : _M_head_impl(std::forward<_UHead>(__h)) { }
 
-     
+
       _Head_base(allocator_arg_t, __uses_alloc0)
       : _M_head_impl() { }
 
@@ -25547,7 +25345,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
         constexpr _Head_base(_UHead&& __h)
  : _M_head_impl(std::forward<_UHead>(__h)) { }
 
-     
+
       _Head_base(allocator_arg_t, __uses_alloc0)
       : _M_head_impl() { }
 
@@ -25741,7 +25539,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
 # 466 "/usr/include/c++/13.2.1/tuple" 3
     protected:
-     
+
       void
       _M_swap(_Tuple_impl& __in)
       {
@@ -25880,7 +25678,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  }
 # 663 "/usr/include/c++/13.2.1/tuple" 3
     protected:
-     
+
       void
       _M_swap(_Tuple_impl& __in)
       {
@@ -26228,7 +26026,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
               static_cast<_Tuple_impl<0, _UElements...>&&>(__in))
  { }
 # 1092 "/usr/include/c++/13.2.1/tuple" 3
-     
+
       tuple&
       operator=(__conditional_t<__assignable<const _Elements&...>(),
     const tuple&,
@@ -26239,7 +26037,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       tuple&
       operator=(__conditional_t<__assignable<_Elements...>(),
     tuple&&,
@@ -26270,7 +26068,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return *this;
  }
 # 1173 "/usr/include/c++/13.2.1/tuple" 3
-     
+
       void
       swap(tuple& __in)
       noexcept(__and_<__is_nothrow_swappable<_Elements>...>::value)
@@ -26296,7 +26094,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     class tuple<>
     {
     public:
-     
+
       void swap(tuple&) noexcept { }
 
 
@@ -26596,7 +26394,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  : _Inherited(__tag, __a, std::forward<_U1>(__in.first),
        std::forward<_U2>(__in.second)) { }
 # 1603 "/usr/include/c++/13.2.1/tuple" 3
-     
+
       tuple&
       operator=(__conditional_t<__assignable<const _T1&, const _T2&>(),
     const tuple&,
@@ -26607,7 +26405,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return *this;
       }
 
-     
+
       tuple&
       operator=(__conditional_t<__assignable<_T1, _T2>(),
     tuple&&,
@@ -26660,7 +26458,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    return *this;
  }
 # 1729 "/usr/include/c++/13.2.1/tuple" 3
-     
+
       void
       swap(tuple& __in)
       noexcept(__and_<__is_nothrow_swappable<_T1>,
@@ -27054,7 +26852,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
   template<typename... _Elements>
-   
+
     inline
 
 
@@ -27068,7 +26866,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     { __x.swap(__y); }
 # 2184 "/usr/include/c++/13.2.1/tuple" 3
   template<typename... _Elements>
-   
+
     typename enable_if<!__and_<__is_swappable<_Elements>...>::value>::type
     swap(tuple<_Elements...>&, tuple<_Elements...>&) = delete;
 
@@ -27093,7 +26891,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 2234 "/usr/include/c++/13.2.1/tuple" 3
   template<class _T1, class _T2>
     template<typename... _Args1, typename... _Args2>
-     
+
       inline
       pair<_T1, _T2>::
       pair(piecewise_construct_t,
@@ -27564,7 +27362,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 62 "/usr/include/c++/13.2.1/bits/locale_classes.h" 3
   class locale
   {
@@ -28078,7 +27875,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/locale_classes.tcc" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/locale_classes.tcc" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/locale_classes.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -28390,14 +28186,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/system_error" 1 3
 # 32 "/usr/include/c++/13.2.1/system_error" 3
-       
 # 33 "/usr/include/c++/13.2.1/system_error" 3
 # 41 "/usr/include/c++/13.2.1/system_error" 3
 # 1 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h" 1 3
 # 34 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h" 3
 # 1 "/usr/include/c++/13.2.1/cerrno" 1 3
 # 39 "/usr/include/c++/13.2.1/cerrno" 3
-       
 # 40 "/usr/include/c++/13.2.1/cerrno" 3
 # 35 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h" 2 3
 
@@ -28548,7 +28342,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/stdexcept" 1 3
 # 36 "/usr/include/c++/13.2.1/stdexcept" 3
-       
 # 37 "/usr/include/c++/13.2.1/stdexcept" 3
 
 
@@ -29982,7 +29775,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 45 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/streambuf" 1 3
 # 36 "/usr/include/c++/13.2.1/streambuf" 3
-       
 # 37 "/usr/include/c++/13.2.1/streambuf" 3
 # 47 "/usr/include/c++/13.2.1/streambuf" 3
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -30372,7 +30164,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/streambuf.tcc" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/streambuf.tcc" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/streambuf.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -30508,19 +30299,16 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 46 "/usr/include/c++/13.2.1/ios" 2 3
 # 1 "/usr/include/c++/13.2.1/bits/basic_ios.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/basic_ios.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/basic_ios.h" 3
 
 
 
 # 1 "/usr/include/c++/13.2.1/bits/locale_facets.h" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/locale_facets.h" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/locale_facets.h" 3
 
 # 1 "/usr/include/c++/13.2.1/cwctype" 1 3
 # 39 "/usr/include/c++/13.2.1/cwctype" 3
-       
 # 40 "/usr/include/c++/13.2.1/cwctype" 3
 # 50 "/usr/include/c++/13.2.1/cwctype" 3
 # 1 "/usr/include/wctype.h" 1 3 4
@@ -30779,7 +30567,6 @@ namespace std
 # 40 "/usr/include/c++/13.2.1/bits/locale_facets.h" 2 3
 # 1 "/usr/include/c++/13.2.1/cctype" 1 3
 # 39 "/usr/include/c++/13.2.1/cctype" 3
-       
 # 40 "/usr/include/c++/13.2.1/cctype" 3
 # 41 "/usr/include/c++/13.2.1/bits/locale_facets.h" 2 3
 # 1 "/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h" 1 3
@@ -30824,7 +30611,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/streambuf_iterator.h" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/streambuf_iterator.h" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/streambuf_iterator.h" 3
 
 
@@ -30833,15 +30619,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
-
-
-
-
-
-
-
- 
 # 49 "/usr/include/c++/13.2.1/bits/streambuf_iterator.h" 3
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
@@ -31191,12 +30968,12 @@ namespace std __attribute__ ((__visibility__ ("default")))
       if (__n == 0)
  return __result;
 
-     
+
 
                             ;
       _CharT* __beg = __result;
       __result += __it._M_sbuf->sgetn(__beg, __n);
-     
+
 
                             ;
       return __result;
@@ -31251,7 +31028,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
  return;
 
       do { if (std::__is_constant_evaluated() && !bool(__n > 0)) __builtin_unreachable(); } while (false);
-     
+
 
                            ;
 
@@ -31275,7 +31052,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
    __n -= __size;
    if (traits_type::eq_int_type(__sb->underflow(), __eof))
      {
-      
+
 
                       ;
        break;
@@ -31293,7 +31070,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 74 "/usr/include/c++/13.2.1/bits/locale_facets.h" 3
   template<typename _Tp>
     void
@@ -32152,8 +31928,6 @@ namespace __cxx11 {
     };
 
 }
-
-
 # 1959 "/usr/include/c++/13.2.1/bits/locale_facets.h" 3
   template<typename _CharT, typename _InIter>
     class num_get : public locale::facet
@@ -32462,15 +32236,7 @@ namespace __cxx11 {
 
   template <typename _CharT, typename _OutIter>
     locale::id num_put<_CharT, _OutIter>::id;
-
-
-
-
-
-
-
-
-
+# 2599 "/usr/include/c++/13.2.1/bits/locale_facets.h" 3
   template<typename _CharT>
     inline bool
     isspace(_CharT __c, const locale& __loc)
@@ -32561,7 +32327,6 @@ namespace __cxx11 {
 
 # 1 "/usr/include/c++/13.2.1/bits/locale_facets.tcc" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/locale_facets.tcc" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/locale_facets.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -33661,7 +33426,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
       return __s;
     }
 # 1224 "/usr/include/c++/13.2.1/bits/locale_facets.tcc" 3
-
 # 1233 "/usr/include/c++/13.2.1/bits/locale_facets.tcc" 3
   template<typename _CharT, typename _Traits>
     void
@@ -34164,7 +33928,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/basic_ios.tcc" 1 3
 # 33 "/usr/include/c++/13.2.1/bits/basic_ios.tcc" 3
-       
 # 34 "/usr/include/c++/13.2.1/bits/basic_ios.tcc" 3
 
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -34303,7 +34066,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 59 "/usr/include/c++/13.2.1/ostream" 3
   template<typename _CharT, typename _Traits>
     class basic_ostream : virtual public basic_ios<_CharT, _Traits>
@@ -34660,7 +34422,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/ostream.tcc" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/ostream.tcc" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/ostream.tcc" 3
 
 
@@ -35020,7 +34781,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 42 "/usr/include/c++/13.2.1/iostream" 2 3
 # 1 "/usr/include/c++/13.2.1/istream" 1 3
 # 36 "/usr/include/c++/13.2.1/istream" 3
-       
 # 37 "/usr/include/c++/13.2.1/istream" 3
 
 
@@ -35030,7 +34790,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 59 "/usr/include/c++/13.2.1/istream" 3
   template<typename _CharT, typename _Traits>
     class basic_istream : virtual public basic_ios<_CharT, _Traits>
@@ -35454,7 +35213,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 # 1 "/usr/include/c++/13.2.1/bits/istream.tcc" 1 3
 # 37 "/usr/include/c++/13.2.1/bits/istream.tcc" 3
-       
 # 38 "/usr/include/c++/13.2.1/bits/istream.tcc" 3
 
 
@@ -36584,7 +36342,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 namespace std __attribute__ ((__visibility__ ("default")))
 {
-
 # 62 "/usr/include/c++/13.2.1/iostream" 3
   extern istream cin;
   extern ostream cout;
@@ -36605,7 +36362,6 @@ namespace std __attribute__ ((__visibility__ ("default")))
 # 3 "main.cpp" 2
 # 1 "/usr/include/c++/13.2.1/cstring" 1 3
 # 39 "/usr/include/c++/13.2.1/cstring" 3
-       
 # 40 "/usr/include/c++/13.2.1/cstring" 3
 
 
@@ -37073,9 +36829,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 }
 }
 # 4 "main.cpp" 2
-
-
-
+# 7 "main.cpp"
 
 # 7 "main.cpp"
 class foo{
